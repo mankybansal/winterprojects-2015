@@ -1,0 +1,713 @@
+<html>
+<head>
+    <title>
+        Winter Projects | IE CSE - MIT's Official CS Club
+    </title>
+
+    <script src="snowstorm.js"></script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        @font-face {
+            font-family: codeBold;
+            src: url('codeBold.otf');
+        }
+
+        @font-face {
+            font-family: jennaSue;
+            src: url('JennaSue.ttf ');
+        }
+
+        @font-face {
+            font-family: roboto;
+            src: url('Roboto-Light.ttf');
+        }
+
+        @font-face {
+            font-family: codeLight;
+            src: url('codeLight.otf');
+        }
+
+        @font-face {
+            font-family: josefinSans;
+            src: url('JosefinSans-Regular.ttf');
+        }
+
+        html, body {
+            width: 100%;
+            padding: 0;
+            border: 0;
+            margin: 0;
+            background: url('bg.png') #EEEEEE;
+            background-size: 100px 100px;
+
+            text-align: center;
+        }
+
+        .header {
+            width: 100%;
+            min-width: 1000px;
+            display: inline-block;
+            padding: 150px 100px 100px 100px;
+            height: 80%;
+            box-sizing: border-box;
+            background: url('winter-snow-bg.jpg') no-repeat #FFFFFF;
+            background-position: 0px -200px;
+            background-size: 100% auto;
+
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+        }
+
+        .heading0 {
+            font-family: codeBold;
+            color: #4F100C;
+            font-size: 30px;
+            text-align: center;
+            text-shadow: 0px 0px 100px #FFF;
+        }
+
+        .heading1 {
+            font-family: codeBold;
+            color: #4F100C;
+            font-size: 80px;
+            text-align: center;
+
+            text-shadow: 0px 0px 100px #FFF;
+        }
+
+        .headingDivider {
+            width: 770px;
+            height: 10px;
+            background: #4F100C;
+            margin: 0 auto;
+            margin-top: 5px;
+            margin-bottom: 5px;
+            box-shadow: 0px 0px 100px #FFF;
+        }
+
+        .googleForm {
+            width: 200px;
+            background: #4F100C;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+            margin: 0 auto;
+            font-family: codeLight;
+            color: #DDD;
+            padding: 15px;
+            box-sizing: border-box;
+            text-align: center;
+            font-size: 25px;
+            margin-top: 60px;
+            cursor: pointer;
+            transition: all ease .5s;
+        }
+
+        .googleForm:hover {
+            box-shadow: 0px 0px 20px rgba(0, 0, 0, 1);
+            color: #FFF;
+        }
+
+        .bounce {
+            -moz-animation: bounce 2s infinite;
+            -webkit-animation: bounce 2s infinite;
+            animation: bounce 2s infinite;
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                -moz-transform: translateY(0);
+                -ms-transform: translateY(0);
+                -webkit-transform: translateY(0);
+                transform: translateY(0);
+            }
+            40% {
+                -moz-transform: translateY(-30px);
+                -ms-transform: translateY(-30px);
+                -webkit-transform: translateY(-30px);
+                transform: translateY(-30px);
+            }
+            60% {
+                -moz-transform: translateY(-15px);
+                -ms-transform: translateY(-15px);
+                -webkit-transform: translateY(-15px);
+                transform: translateY(-15px);
+            }
+        }
+
+        .container {
+            width: 80%;
+            min-width: 1000px;
+            background: #FFFFFF;
+            box-shadow: 0px 0px 20px rgba(0, 0, 0, .2);
+            box-sizing: border-box;
+            margin: 0 auto;
+            margin-top: 40px;
+            margin-bottom: 40px;
+            font-family: josefinSans;
+        }
+
+        .title {
+            height: 80px;
+            background: #333;
+            color: #EEE;
+            font-family: josefinSans;
+            padding: 20px;
+            box-sizing: border-box;
+            width: 100%;
+            font-size: 40px;
+            float: top;
+        }
+
+        .myContent {
+            float: top;
+            width: 100%;
+            display: inline-block;
+            min-height: 200px;
+        }
+
+        .description {
+            width: 70%;
+            float: left;
+            color: #555;
+            background: #EEE;
+            display: inline-block;
+            min-height: 200px;
+            padding: 50px 75px 50px 75px;
+            font-size: 20px;
+            box-sizing: border-box;
+            font-family: roboto;
+        }
+
+        .prerequisites {
+            width: 30%;
+            float: left;
+            font-size: 20px;
+            display: inline-block;
+            min-height: 200px;
+            padding: 50px;
+            box-sizing: border-box;
+            color: #555;
+            font-family: roboto;
+        }
+
+        .iecse-logo {
+            width: 150px;
+            height: 150px;
+            margin-bottom: 20px;
+        }
+
+        .contentTitle {
+            font-size: 25px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            margin-top: -20px;
+        }
+
+        .footer {
+            width: 100%;
+            background: #333;
+            padding: 50px 0px 0px 0px;
+            color: white;
+            font-family: josefinSans;
+            font-size: 20px;
+            box-sizing: border-box;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .trees {
+            width: 100%;
+            margin-top: 20px;
+            opacity: 0.7;
+        }
+
+        .intro {
+            padding: 70px 100px 70px 100px;
+            font-size: 23px;
+
+            color: #555;
+            font-family: roboto;
+        }
+
+        .contact {
+            width: 100%;
+            background: #4F100C;
+            color: white;
+            padding: 20px;
+            font-size: 20px;
+            box-sizing: border-box;
+            display: inline-block;
+            color: white;
+            font-family: josefinSans;
+        }
+
+        a, a:hover, a:visited {
+            text-decoration: none;
+        }
+
+        .seal {
+            width: 130px;
+            height: 130px;
+            position: absolute;
+            margin-left: 100px;
+            margin-top: -80px;
+            -ms-transform: rotate(-20deg); /* IE 9 */
+            -webkit-transform: rotate(-20deg); /* Chrome, Safari, Opera */
+            transform: rotate(-20deg);
+        }
+
+        @media only screen and (max-width: 600px) {
+
+            .seal {
+                position: relative;
+                margin: 0 auto;
+                margin-top: 30px;
+            }
+
+            html, body {
+                width: 100%;
+
+                min-width: 200px;
+            }
+
+            .heading0 {
+                font-size: 20px;
+            }
+
+            .heading1 {
+
+                font-size: 40px;
+            }
+
+            .headingDivider {
+                width: 80%;
+            }
+
+            .intro {
+                padding: 20px;
+            }
+
+            .header {
+                width: 100%;
+                min-width: 200px;
+                padding: 100px 0px 50px 0px;
+                background-position: -100px 0px;
+                background-size: auto 100%;
+            }
+
+            .title {
+                display: inline-block;
+                min-width: 20px;
+                height: auto;
+            }
+
+            .trees {
+                width: 250%;
+            }
+
+            .footer {
+                overflow: hidden;
+                font-size: 17px;
+            }
+
+            .container {
+                width: 100%;
+                min-width: 200px;
+            }
+
+            .description {
+                width: 100%;
+                padding: 50px 20px 50px 20px;
+            }
+
+            .prerequisites {
+                width: 100%;
+                padding: 50px 20px 50px 20px;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+</head>
+
+<body>
+<div class="header">
+
+    <div class="heading0">IE CSE PRESENTS</div>
+    <div class="headingDivider"></div>
+    <div class="heading1">THE WINTER PROJECT</div>
+    <div class="headingDivider"></div>
+
+    <div class="heading0">FOR KEEPING YOUR HANDS WARM</div>
+    <a href="https://docs.google.com/forms/d/1N1nbMa6j3Gkb33tSF_qPcRZbfQki9klmbbJLyXyogIU/viewform?c=0&w=1"
+       target="_blank">
+        <div class="googleForm">
+            SIGN UP NOW
+        </div>
+    </a>
+</div>
+
+<i class='fa fa-angle-down bounce ' style=' margin-top: 30px; font-size: 75px; color: rgba(0,0,0, 0.7);'></i>
+
+<div class="container intro">
+    <span style="font-family: jennaSue; font-size: 60px;"> Hi there!</span><br><br>
+
+    We hope the first few days of your vacations have been awesome.<br>
+    It's time we now get down to some work.<br><br>
+    As you know, IE CSE isn't a club that sits idle over the winter vacations, and that's why, thanks to your
+    suggestions and ideas, we give you the winter projects.
+    <br><br>
+    In an attempt to help you get better at your area of interest, the Management Committee of the club is willing to
+    mentor you through the vacations, in a vast range of fields, selected as per your suggestions. Go through the list
+    below, carefully and choose a topic that best suits you. You may choose up to 2 topics only. Please
+    don't take up more than you can handle!
+    <br>All the best! :)
+    <br><br>
+    With love,<br>
+    <b>- IE CSE Winter Projects Team</b>
+    <img src="seal.png" class="seal">
+</div>
+
+<div class="container">
+    <div class="title">
+        DESIGN
+    </div>
+    <div class="myContent">
+        <div class="description">
+            <div class="contentTitle">DESCRIPTION</div>
+            The winter project starts with the basic mentoring with Photoshop(Ps) /
+            Illustrator(Ai) for 4-5 days for the beginners. The mentoring will be over
+            WhatsApp/Facebook, where the learners will get one on one attention from
+            the mentors. This will be followed by a WC Designathon.
+            <br><br>
+            The Designathon will consist of several rounds, each of 3-4 days. The WC will
+            be given a topic for each round. They'll have to post designs in the given
+            duration. Their designs will be graded by the ManCom and the Board with
+            points at the end of each round. The winners will be announced after the last
+            round. The ManCom will be present at every step for mentoring the WC.
+            <br><br>
+            Also, the winners of the Designathon along with the ManCom and the Board
+            get to collaborate on a group project to be put up online.
+            <br><br>
+            Apart from that, we plan to make a portfolio for IE CSE Studios, on
+            behance/dribble. This online portfolio will encompass some of studios' best
+            work from the past, the collaboration project, and the best designs from the
+            designathon.
+        </div>
+        <div class="prerequisites">
+            <div class="contentTitle">PREREQUISITES</div>
+            None! Everyone who is interested will get a chance to learn
+            and be mentored throughout the course of the project. Mentors will be
+            helping you out with whatever it is that you need!
+        </div>
+    </div>
+
+    <div class="contact">
+        Get in touch with <b>ILEESHA</b> <br>
+        <i class="fa fa-phone" style="color: white;"></i> +91 97416 53755
+    </div>
+</div>
+
+<div class="container">
+    <div class="title">
+        IE CSE WEBSITE
+    </div>
+    <div class="myContent">
+        <div class="description">
+            <div class="contentTitle">DESCRIPTION</div>
+            Our aim is to develop the IE CSE website before the college reopens. We'll pick
+            3-4 WC members who are good at web dev and proceed to build the new
+            website. The entire website will be developed by the WC members. The
+            <br><br>
+            ManComm will be there guide them.Since we are aiming to develop the
+            website in the vacations itself, we expect the interested ones to be aware of
+            basic web development. If someone wishes to learn web development, there is
+            a separate Web Dev group where we will be teaching the WC members basics
+            of web development.
+        </div>
+        <div class="prerequisites">
+            <div class="contentTitle">PREREQUISITES</div>
+            Prerequisites-HTML,CSS, basics of Javascript, and a lot of creativity!
+        </div>
+    </div>
+
+    <div class="contact">
+        Get in touch with <b>BHARGAV</b> <br>
+        <i class="fa fa-phone" style="color: white;"></i> +91 81236 37692
+    </div>
+</div>
+
+<div class="container">
+    <div class="title">
+        PYTHON
+    </div>
+    <div class="myContent">
+        <div class="description">
+            <div class="contentTitle">DESCRIPTION</div>
+            <b>Objective:</b> To learn the Python language and work on a project.
+            <br><br>
+            Python is an open source general purpose programming language which is
+            used in fields like data science,machine leaning, data viz,game dev,web
+            development (django,flask)etc.
+            <br><br>
+            The students will learn the language by the 31st of December. Basics like
+            expressions and Data types, functions, loops, conditions, files, lists, etc will be
+            covered. When that is done, they will be given a set of questions to assess
+            themselves with. They will then work on a project over the next ten days,
+            which will be told to them within the next two weeks.
+        </div>
+        <div class="prerequisites">
+            <div class="contentTitle">PREREQUISITES</div>
+            NONE. Just the drive to learn!
+        </div>
+    </div>
+
+    <div class="contact">
+        Get in touch with <b>SACHI</b> <br>
+        <i class="fa fa-phone" style="color: white;"></i> +91 88845 00255
+    </div>
+</div>
+
+<div class="container">
+    <div class="title">
+        CRYPTOGRAPHY
+    </div>
+    <div class="myContent">
+        <div class="description">
+            <div class="contentTitle">DESCRIPTION</div>
+            <b>Objective:</b> To learn the Python language and work on a project.
+            <br><br>
+            In today's digitised world, most content is in the form of images and video.
+            Information security is one of the most growing priorities today and secure encryption algorithms are
+            required to protect sensitive content from unauthorised access.
+            The aim of this winter project is to learn about the basic concepts of cryptography,
+            understand how images can be encrypted and what different loopholes need to be addressed
+            while encrypting images and finally to develop a new algorithm to encrypt images.
+
+            <br><br>
+            The students will learn the language by the 31st of December. Basics like
+            expressions and Data types, functions, loops, conditions, files, lists, etc will be
+            covered. When that is done, they will be given a set of questions to assess
+            themselves with. They will then work on a project over the next ten days,
+            which will be told to them within the next two weeks.
+        </div>
+        <div class="prerequisites">
+            <div class="contentTitle">PREREQUISITES</div>
+            Knowledge of basic MATLAB functions, understanding of pixel-pixel representation of RGB images(tri-plane
+            structure)
+            <br><br><b>Duration: 4 Weeks</b>
+
+        </div>
+    </div>
+
+    <div class="contact">
+        Get in touch with <b>SOORYA</b> <br>
+        <i class="fa fa-phone" style="color: white;"></i> +91 96322 93466
+    </div>
+</div>
+
+<div class="container">
+    <div class="title">
+        JAVA DEVELOPMENT
+    </div>
+    <div class="myContent">
+        <div class="description">
+            <div class="contentTitle">DESCRIPTION</div>
+            <b>Objective:</b> Learn the basics of Java as well as why and where it is used.
+            <br><br>
+            The course will introduce you to the basics of Java. The course assumes no prior knowledge of Java. The
+            topics covered will comprise of:
+            <br><br>Introduction, IDEs, How Java works, Programming Core Java, Java Collections Framework.
+            <br><br>This will continue during the next semester as a foundation to swings, applets and Android.
+        </div>
+        <div class="prerequisites">
+            <div class="contentTitle">PREREQUISITES</div>
+            NONE.
+        </div>
+    </div>
+
+    <div class="contact">
+        Get in touch with <b>AVI</b> <br>
+        <i class="fa fa-phone" style="color: white;"></i> +91 95913 27175
+    </div>
+
+</div>
+
+<div class="container">
+    <div class="title">
+        COMPETITIVE CODING + WCS
+    </div>
+    <div class="myContent">
+        <div class="description">
+            <div class="contentTitle">DESCRIPTION</div>
+            <div style="text-align: left">
+                <b>Objective(s): </b><br> A) To enhance one's competitive coding skills
+                <br>B) Ensure positive competition among the WC members
+                <br>C) Select members who can help with the WCS
+
+                <br><br>
+                Points will be awarded to each one individually based on their performance.
+                <br><b>1.</b> We will give them the FIRST question.
+                <br><b>2.</b>Person 'A', winning the first round, will set the next question, which will be verified by
+                us.
+                <br><b>3. </b>The winner of the second round will set the next question and so on.
+                <br><b>4.</b> A 24 or 48 (to be decided) hour gap will be given to attempt/solve each question.
+                Questions will be uploaded at night.
+                <br><b>5.</b> Test cases will be verified by us and we will help them with the test cases in case the
+                question is tough.
+                <br><b>6.</b> Points will be awarded to them in accordance with the last WCS scoring system.
+                <br><b>7.</b> Partial test cases will hold some points as well (so that they don't get demotivated).
+                <br><b>8.</b> Few members with high cumulative scores will help with the WCS,this year.
+                <br><br>
+                Also, we plan to prep them with a few topics like STL, Vectors and Time Complexities.
+            </div>
+
+        </div>
+        <div class="prerequisites">
+            <div class="contentTitle">PREREQUISITES</div>
+            Members should have attended AT LEAST 2 code-meet sessions.<br>
+            They can PM us, in case they are interested and haven't done so. We will decide accordingly.
+        </div>
+    </div>
+
+    <div class="contact">
+        Get in touch with <b>SUKRITI</b> <br>
+        <i class="fa fa-phone" style="color: white;"></i> +91 94499 87703
+    </div>
+</div>
+
+<div class="container">
+    <div class="title">
+        HASHTAG
+    </div>
+    <div class="myContent">
+        <div class="description">
+            <div class="contentTitle">DESCRIPTION</div>
+            Shoutout for all creative writers out there!
+            <br><br>
+            Hashtag, is IE CSE's magazine, will now be rechristened as a web based media platform. Being part of the
+            project, you will get to write articles about news, projects and anything interesting going on in the tech
+            world, or the club. We will be giving you topics, mentoring, editing, and guiding you through the whole
+            production process of an online magazine.
+            <br><br>
+            Last year, we covered topics like the CES 2015, Sony Hack and much more. We are very excited to see how it
+            turns out this year!
+            <br><br>
+            We are planning on maintaining hashtag as an online blog throughout the year with articles being uploaded
+            all the time.
+        </div>
+        <div class="prerequisites">
+            <div class="contentTitle">PREREQUISITES</div>
+            Good written communication skills and creativity!
+        </div>
+    </div>
+
+    <div class="contact">
+        Get in touch with <b>KATHAKALI</b> <br>
+        <i class="fa fa-phone" style="color: white;"></i> +91 96636 05518
+    </div>
+</div>
+
+<div class="container">
+    <div class="title">
+        ANDROID APP DEVELOPMENT
+    </div>
+    <div class="myContent">
+        <div class="description">
+            <div class="contentTitle">DESCRIPTION</div>
+            <b>Objective:</b> Learning basic Android app development and make a fully working interactive app.
+            <br><br>
+            The winter project will start with ManComm and board members mentoring the WC on basic Android app
+            development.
+            The learners will get assistance on every stage of learning. The mentors will provide the learners with
+            learning material.
+            The learners will also have read only access to the source code of the new IE CSE application (which is
+            under development).
+        </div>
+        <div class="prerequisites">
+            <div class="contentTitle">PREREQUISITES</div>
+            Basic Java knowledge!
+        </div>
+    </div>
+    <div class="contact">
+        Get in touch with <b>ADHIRAJ SINGH</b> <br>
+        <i class="fa fa-phone" style="color: white;"></i> +91 95605 47016
+    </div>
+</div>
+
+<div class="container">
+    <div class="title">
+        WINDOWS APP DEVELOPMENT
+    </div>
+    <div class="myContent">
+        <div class="description">
+            <div class="contentTitle">DESCRIPTION</div>
+            <b>Objective:</b> Learning basic Windows app development and make a fully working interactive app for
+            Windows 10.
+            <br><br>
+            We will be teaching you the basics of the Windows 10 framework for mobile and universal apps.
+            You will be working with C# and XAML based app development, along with server-client request handling.
+            The participants will also have read only access to the source code of the new IE CSE application for
+            windows (which is
+            under development).
+        </div>
+        <div class="prerequisites">
+            <div class="contentTitle">PREREQUISITES</div>
+            Basic C#/C++ & XML
+            <br><br>
+            If you have a Windows Phone, it'll be helpful. (Not necessary)
+        </div>
+    </div>
+    <div class="contact">
+        Get in touch with <b>SAKSHAM</b> <br>
+        <i class="fa fa-phone" style="color: white;"></i> +91 90136 22205
+    </div>
+</div>
+
+<div class="container">
+    <div class="title">
+        WEB DEV
+    </div>
+    <div class="myContent">
+        <div class="description">
+            <div class="contentTitle">DESCRIPTION</div>
+            Web Dev: Often, a month can change a lot. Including someone's future. This winter, you could kick start your
+            career
+            as a web developer.
+            <br><br>
+            We at IE CSE have some of the best web developers in MIT. So here's your chance to open up new avenues.
+            <br><br>
+            We'll be guiding you through the basics of HTML, CSS, JS, PHP and MYSQL. If you already have some
+            experience, then great!
+            <br><br>
+            However if you're a complete newbie, this will cater to your thirst too! We will teach you basics and
+            eventually work on
+            a mini project over the course of the next month. Love to have you on board!
+
+        </div>
+        <div class="prerequisites">
+
+            <div class="contentTitle">PREREQUISITES</div>
+            NONE!<br>(Actually, a computer with a sizable internet connection is required. There is no place like
+            127.0.0.1)
+            <br><br>
+            P.S: You'll get that joke at the end of this month!
+
+        </div>
+    </div>
+    <div class="contact">
+        Get in touch with <b>ADITYA WALVEKAR</b> <br>
+        <i class="fa fa-phone" style="color: white;"></i> +91 98765 98575
+    </div>
+</div>
+
+<div class="footer">
+    <img src="iecse-logo.png" class="iecse-logo">
+    <div style="width: 100%;">
+        WITH &nbsp;<i class="fa fa-heart"></i>&nbsp; FROM <b>IE CSE STUDIOS</b>
+    </div>
+    <img src="trees.png" class="trees">
+</div>
+
+</body>
+
+</html>
